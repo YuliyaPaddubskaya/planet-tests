@@ -51,7 +51,6 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
-        continue-on-error: true
 
       - name: Upload allure-results
         uses: actions/upload-artifact@v6
@@ -62,6 +61,7 @@ jobs:
   generate-report:
     name: Generate Allure Report
     needs: test
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
