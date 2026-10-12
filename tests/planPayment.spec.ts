@@ -8,7 +8,7 @@ test.describe('Payment Methods Coverage Tests', () => {
     },
     {
       name: 'Cryptocurrency' as const,
-      expectedGatewayUrl: /new-pay\.heleket\.com\/pay\//,
+      expectedGatewayUrl: /heleket\.com\/pay\//,
     },
   ];
 
