@@ -90,6 +90,7 @@ jobs:
   publish-report:
     name: Publish to GitHub Pages
     needs: generate-report
+    if: success()
     runs-on: ubuntu-latest
     permissions:
       pages: write
